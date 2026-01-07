@@ -8,7 +8,7 @@ interface VideoSectionProps {
 export function VideoSection({
   videoUrl = 'https://inv.perditum.com/embed/vaZOlKwFX_0?',
   title = 'Как работает партнёрская программа',
-  description = 'Посмотрите короткий 2-минутный обзор того, как вы можете создать регулярный доход с WidgetBlocks.'
+  description = 'Посмотрите короткий 20-минутный обзор того, как вы можете создать регулярный доход с WidgetBlocks.'
 }: VideoSectionProps) {
 const handlePlaylist = () => {
  window.open('https://inv.perditum.com/playlist?list=PLZzS4wQVyqj8FD8FqH37oolJ4TToCc-E3', '_blank');
