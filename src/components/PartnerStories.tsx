@@ -5,8 +5,8 @@ const stories = [{
   name: 'Анна Петрова',
   company: 'WebStudio Pro',
   image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  quote: 'Интеграция WidgetBlocks увеличила удержание наших клиентов на 40%. Это самый простой апселл, который у нас когда-либо был.',
-  metric: '+180% дохода',
+  quote: 'Клиенты сами добавляют формы и чаты через конструктор. Экономлю 10+ часов в неделю на доработках сайтов.',
+  metric: '-10ч/неделя',
   rating: 5,
   gradient: 'from-blue-500 to-cyan-500'
 }, {
@@ -14,8 +14,8 @@ const stories = [{
   name: 'Иван Сидоров',
   company: 'TechSolutions',
   image: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  quote: 'Я подключил 50+ клиентов за первый месяц. Концепция "Лего" делает объяснение настолько простым даже для нетехнических клиентов.',
-  metric: '50+ клиентов',
+  quote: 'Подключил 25 партнёров за месяц. Они собирают виджеты сами — продаю в 3 раза быстрее кастомной разработки.',
+  metric: '25 партнёров/мес',
   rating: 5,
   gradient: 'from-purple-500 to-pink-500'
 }, {
@@ -23,11 +23,12 @@ const stories = [{
   name: 'Мария Козлова',
   company: 'DigitalAgency',
   image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  quote: 'Пассивный доход полностью покрывает аренду нашего офиса. Это надёжно, быстро, и поддержка просто потрясающая.',
-  metric: '$4,200/мес пассивно',
+  quote: 'Конверсия лендингов выросла на 25% после добавления интерактивных калькуляторов. Клиенты видят результат сразу.',
+  metric: '+25% конверсия',
   rating: 5,
   gradient: 'from-green-500 to-emerald-500'
 }];
+
 export function PartnerStories() {
   return <div className="bg-gradient-to-br from-gray-50 to-purple-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
