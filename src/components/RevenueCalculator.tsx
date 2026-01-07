@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DollarSign, Users, TrendingUp } from 'lucide-react';
-import { Rub } from 'lucide-react'; // Импортируем иконку рубля
+import { RussianRuble as Rub } from 'lucide-react';
 
 export function RevenueCalculator() {
   const [clients, setClients] = useState(50);
