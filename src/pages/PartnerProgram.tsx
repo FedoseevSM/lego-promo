@@ -8,6 +8,9 @@ import { VideoSection } from '../components/VideoSection';
 import { PartnerStories } from '../components/PartnerStories';
 import { BecomePartnerCTA } from '../components/BecomePartnerCTA';
 export function PartnerProgram() {
+const handleTelegram = () => {
+window.open('https://t.me/+a9CM2qMtcfU5ZmEy', '_blank');
+}
   return <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 font-sans">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-50 shadow-sm">
@@ -68,7 +71,7 @@ export function PartnerProgram() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-200">
+            <button onClick={handleTelegram} className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-200">
               Начать зарабатывать
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
                 →
