@@ -10,6 +10,9 @@ export function VideoSection({
   title = 'Как работает партнёрская программа',
   description = 'Посмотрите короткий 2-минутный обзор того, как вы можете создать регулярный доход с WidgetBlocks.'
 }: VideoSectionProps) {
+const handlePlaylist = () => {
+ window.open('https://youtube.com/playlist?list=PLZzS4wQVyqj8FD8FqH37oolJ4TToCc-E3&si=P_tnxdb4clWiV7KC', '_blank');
+}
   return <div className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-red-100 to-pink-100 rounded-2xl mb-6">
@@ -29,7 +32,7 @@ export function VideoSection({
         </div>
 
         <div className="mt-10">
-          <button className="inline-flex items-center text-blue-600 font-bold text-lg hover:text-blue-800 transition-colors group">
+          <button onClick={handlePlaylist} className="inline-flex items-center text-blue-600 font-bold text-lg hover:text-blue-800 transition-colors group">
             <Play className="w-6 h-6 mr-2 fill-current group-hover:scale-110 transition-transform" />
             Смотреть полную серию уроков
           </button>
