@@ -6,7 +6,7 @@ interface VideoSectionProps {
   description?: string;
 }
 export function VideoSection({
-  videoUrl = 'https://inv.perditum.com/embed/vaZOlKwFX_0?',
+  videoUrl = 'https://inv.perditum.com/embed/vaZOlKwFX_0?autoplay=1',
   title = 'Как работает партнёрская программа',
   description = 'Посмотрите короткий 20-минутный обзор того, как вы можете создать регулярный доход с WidgetBlocks.'
 }: VideoSectionProps) {
