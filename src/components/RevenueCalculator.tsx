@@ -9,6 +9,10 @@ export function RevenueCalculator() {
   const monthlyIncome = Math.round(clients * avgCheck * commissionRate);
   const yearlyIncome = monthlyIncome * 12;
   
+  const handleTelegram = () => {
+window.open('https://t.me/+a9CM2qMtcfU5ZmEy', '_blank');
+}
+
   return (
     <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 py-20 text-white overflow-hidden">
       {/* Animated background elements */}
@@ -124,7 +128,7 @@ export function RevenueCalculator() {
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-5 px-8 rounded-2xl transition-all shadow-xl hover:shadow-2xl hover:scale-105 transform duration-200">
+              <button onClick={handleTelegram} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-5 px-8 rounded-2xl transition-all shadow-xl hover:shadow-2xl hover:scale-105 transform duration-200">
                 Начать зарабатывать сейчас
               </button>
             </div>
