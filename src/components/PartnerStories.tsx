@@ -23,8 +23,8 @@ const stories = [{
   name: 'Мария Козлова',
   company: 'DigitalAgency',
   image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  quote: 'Конверсия лендингов выросла на 25% после добавления интерактивных калькуляторов. Клиенты видят результат сразу.',
-  metric: '+25% конверсия',
+  quote: 'Конверсия лендингов выросла на 30% после добавления интерактивных калькуляторов. Клиенты видят результат сразу.',
+  metric: '+30% конверсия',
   rating: 5,
   gradient: 'from-green-500 to-emerald-500'
 }];
