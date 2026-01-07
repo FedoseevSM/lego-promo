@@ -198,7 +198,7 @@ export function PartnerProgram() {
           </div>
           <div className="pt-8 border-t border-gray-100 text-center">
             <p className="text-gray-500">
-              &copy; 2024 WidgetBlocks Inc. Все права защищены.
+              &copy; 2026 WidgetBlocks Inc. Все права защищены.
             </p>
           </div>
         </div>
