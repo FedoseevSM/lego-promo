@@ -81,9 +81,6 @@ export function PartnerProgram() {
         </div>
       </div>
 
-      {/* Partner Stats */}
-      <PartnerStats />
-
       {/* Revenue Calculator */}
       <RevenueCalculator />
 
