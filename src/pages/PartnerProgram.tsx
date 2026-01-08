@@ -11,6 +11,9 @@ export function PartnerProgram() {
 const handleTelegram = () => {
 window.open('https://t.me/+a9CM2qMtcfU5ZmEy', '_blank');
 }
+const handleDemo = () => {
+window.open('https://forkpack.ru', '_blank');
+}
   return <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 font-sans">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-50 shadow-sm">
@@ -66,7 +69,7 @@ window.open('https://t.me/+a9CM2qMtcfU5ZmEy', '_blank');
                 →
               </span>
             </button>
-            <button className="px-8 py-4 bg-white text-gray-700 rounded-xl font-bold text-lg border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200">
+            <button onClick={handleDemo} className="px-8 py-4 bg-white text-gray-700 rounded-xl font-bold text-lg border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200">
               Смотреть демо
             </button>
           </div>
