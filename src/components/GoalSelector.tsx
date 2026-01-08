@@ -126,8 +126,8 @@ export function GoalSelector() {
                 <div className="absolute inset-[2px] bg-white rounded-3xl"></div>
 
                 <div className="relative">
-                  <div className="h-48 overflow-hidden bg-gray-100 relative">
-                    <img src={goal.image} alt={goal.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="h-48 overflow-hidden hidden bg-gray-100 relative">
+                    <img src={goal.image} alt={goal.name} className="w-full hidden h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className={`absolute hidden top-4 right-4 bg-gradient-to-br ${goal.gradient} text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg`}>
                       ${goal.price}
                     </div>
