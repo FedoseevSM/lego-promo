@@ -55,7 +55,7 @@ export function PartnerStories() {
                 </div>
 
                 <div className="flex items-center mb-6">
-                  <div className="relative">
+                  <div className="relative hidden">
                     <img className="h-14 w-14 rounded-full border-4 border-white shadow-lg" src={story.image} alt={story.name} />
                     <div className={`absolute -bottom-1 -right-1 w-5 h-5 bg-gradient-to-br ${story.gradient} rounded-full border-2 border-white`}></div>
                   </div>
