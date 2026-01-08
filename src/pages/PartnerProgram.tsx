@@ -188,7 +188,7 @@ window.open('https://forkpack.ru', '_blank');
               </ul>
             </div>
           </div>
-          <div className="pt-8 border-t border-gray-100 text-center">
+          <div className="pt-8 border-gray-100 text-center">
             <p className="text-gray-500">
               &copy; 2026 WidgetBlocks Inc. Все права защищены.
             </p>
