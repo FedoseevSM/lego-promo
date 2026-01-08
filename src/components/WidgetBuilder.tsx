@@ -13,7 +13,7 @@ interface Widget {
 }
 const AVAILABLE_WIDGETS: Widget[] = [{
   id: 'chat',
-  name: 'Модуль онлайн-чата',
+  name: 'Онлайн-чат',
   description: 'Мгновенная поддержка клиентов с возможностями ИИ.',
   icon: MessageSquare,
   color: 'red',
@@ -21,7 +21,7 @@ const AVAILABLE_WIDGETS: Widget[] = [{
   cdnUrl: 'https://cdn.legowidgets.com/v2/chat.min.js'
 }, {
   id: 'analytics',
-  name: 'Аналитика трафика',
+  name: 'Аналитика',
   description: 'Отслеживание посетителей в реальном времени и тепловые карты.',
   icon: BarChart3,
   color: 'blue',
