@@ -12,7 +12,7 @@ const handleTelegram = () => {
 window.open('https://t.me/+a9CM2qMtcfU5ZmEy', '_blank');
 }
 const handleDemo = () => {
-window.open('https://forkpack.ru', '_blank');
+window.open('https://forkpack.ru/#fp', '_blank');
 }
   return <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 font-sans">
       {/* Header */}
