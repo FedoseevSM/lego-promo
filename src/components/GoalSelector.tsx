@@ -128,7 +128,7 @@ export function GoalSelector() {
                 <div className="relative">
                   <div className="h-48 overflow-hidden bg-gray-100 relative">
                     <img src={goal.image} alt={goal.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    <div className={`absolute top-4 right-4 bg-gradient-to-br ${goal.gradient} text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg`}>
+                    <div className={`absolute hidden top-4 right-4 bg-gradient-to-br ${goal.gradient} text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg`}>
                       ${goal.price}
                     </div>
                     {/* Pizza bonus badge */}
@@ -157,7 +157,7 @@ export function GoalSelector() {
                       </div>
                     </div>
 
-                    <a href={goal.link} target="_blank" rel="noopener noreferrer" className={`group/btn w-full flex items-center justify-center px-4 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r ${goal.gradient} hover:shadow-lg transition-all duration-200 hover:scale-105`}>
+                    <a href={goal.link} target="_blank" rel="noopener noreferrer" className={`group/btn w-full hidden flex items-center justify-center px-4 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r ${goal.gradient} hover:shadow-lg transition-all duration-200 hover:scale-105`}>
                       <ShoppingBag className="w-4 h-4 mr-2" />
                       Купить
                       <ExternalLink className="w-3 h-3 ml-2 opacity-70 group-hover/btn:translate-x-1 transition-transform" />
