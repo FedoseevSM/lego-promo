@@ -101,7 +101,7 @@ window.open('https://t.me/+a9CM2qMtcfU5ZmEy', '_blank');
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+          <div className="hidden grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Продукт</h3>
               <ul className="space-y-2 text-gray-600">
