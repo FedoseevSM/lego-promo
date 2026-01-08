@@ -26,17 +26,6 @@ window.open('https://t.me/+a9CM2qMtcfU5ZmEy', '_blank');
               </span>
             </h1>
           </div>
-          <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Документация
-            </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Цены
-            </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Поддержка
-            </a>
-          </nav>
           <div className="flex items-center space-x-4">
           
           </div>
