@@ -11,7 +11,7 @@ export function VideoSection({
   description = 'Посмотрите короткий 20-минутный обзор того, как вы можете создать регулярный доход с WidgetBlocks.'
 }: VideoSectionProps) {
 const handlePlaylist = () => {
- window.open('https://inv.perditum.com/playlist?list=PLZzS4wQVyqj8FD8FqH37oolJ4TToCc-E3', '_blank');
+ window.open('https://kinescope.io/d2Vtt24Tk8aVNPvCUsvuDy', '_blank');
 }
   return <div className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
