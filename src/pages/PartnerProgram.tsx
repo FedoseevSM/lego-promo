@@ -7,6 +7,8 @@ import { GoalSelector } from '../components/GoalSelector';
 import { VideoSection } from '../components/VideoSection';
 import { PartnerStories } from '../components/PartnerStories';
 import { BecomePartnerCTA } from '../components/BecomePartnerCTA';
+import SuccessStoryBurger from '../components/SuccessStoryBurger';
+
 export function PartnerProgram() {
 const handleTelegram = () => {
 window.open('https://t.me/+a9CM2qMtcfU5ZmEy', '_blank');
@@ -100,6 +102,9 @@ window.open('https://forkpack.ru/#fp', '_blank');
 
       {/* Success Stories */}
       <PartnerStories />
+
+      
+  <SuccessStoryBurger />
 
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 mt-16">
