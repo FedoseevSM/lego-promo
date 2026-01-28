@@ -158,17 +158,7 @@ const SuccessStoryBurger = () => {
           ))}
         </div>
         
-        <div className="bg-white/5 rounded-2xl p-6 md:p-8 mb-10 border border-white/8">
-          <h2 className="text-2xl md:text-3xl text-white mb-6 text-center">
-            Секрет успешного "бургера" достижений
-          </h2>
-          <p className="text-base md:text-lg max-w-3xl mx-auto mb-5 text-center leading-relaxed text-[#ccd9f0]">
-            Как и в хорошем бургере, успех складывается из качественных ингредиентов: целеустремленности (булочка), навыков (котлета) и реализации (сыр). Каждый слой этой истории важен и дополняет другие, создавая целостную картину достижений.
-          </p>
-          <p className="text-base md:text-lg max-w-3xl mx-auto text-center leading-relaxed text-[#ccd9f0]">
-            Эти три проекта демонстрируют, как разные навыки — от переговоров и финансового планирования до технической экспертизы — могут сочетаться для достижения впечатляющих результатов в различных сферах.
-          </p>
-        </div>
+       
       </div>
     </div>
   );
