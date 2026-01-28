@@ -1,8 +1,10 @@
+// SuccessStoryBurger.jsx (Tailwind версия)
 import React, { useState, useEffect } from 'react';
-import './SuccessStoryBurger.css';
+import { FaChevronDown, FaChevronUp, FaTrophy, FaCheckCircle } from 'react-icons/fa';
 
 const SuccessStoryBurger = () => {
   const [activeLayer, setActiveLayer] = useState(0);
+  const [loaded, setLoaded] = useState(false);
 
   const burgerLayers = [
     {
@@ -11,6 +13,10 @@ const SuccessStoryBurger = () => {
       title: "Автомобиль для Time2Win",
       label: "Слой 1 - Автомобиль",
       colorClass: "layer-1",
+      gradient: "from-[#ff7e5f]/15 to-[#feb47b]/10",
+      borderColor: "border-l-[#ff7e5f]",
+      numberColor: "bg-[#ff7e5f]/30 text-[#ff7e5f]",
+      iconColor: "text-[#ff7e5f]",
       description: "Моя задача заключалась в помощи компании Time2Win с приобретением автомобиля для корпоративных нужд. Необходимо было найти оптимальное решение, которое сочеталось бы с имиджем компании и при этом было экономически эффективным.",
       achievement: {
         title: "Достигнутый результат:",
@@ -29,6 +35,10 @@ const SuccessStoryBurger = () => {
       title: "Кругосветное путешествие за год",
       label: "Слой 2 - Путешествие",
       colorClass: "layer-2",
+      gradient: "from-[#7b4397]/15 to-[#dc2430]/10",
+      borderColor: "border-l-[#7b4397]",
+      numberColor: "bg-[#7b4397]/30 text-[#7b4397]",
+      iconColor: "text-[#7b4397]",
       description: "Поставив амбициозную цель — совершить кругосветное путешествие менее чем за год, я разработал стратегию заработка, которая позволила не только финансировать поездку, но и создала устойчивый источник дохода на будущее.",
       achievement: {
         title: "Достигнутый результат:",
@@ -47,6 +57,10 @@ const SuccessStoryBurger = () => {
       title: "Сайт Тимирязевской академии с Cup In Box",
       label: "Слой 3 - Сайт",
       colorClass: "layer-3",
+      gradient: "from-[#2193b0]/15 to-[#6dd5ed]/10",
+      borderColor: "border-l-[#2193b0]",
+      numberColor: "bg-[#2193b0]/30 text-[#2193b0]",
+      iconColor: "text-[#2193b0]",
       description: "В сотрудничестве с компанией Cup In Box я участвовал в создании официального сайта Тимирязевской академии. Проект требовал глубокого понимания потребностей образовательного учреждения и реализации современного цифрового решения.",
       achievement: {
         title: "Достигнутый результат:",
@@ -65,80 +79,95 @@ const SuccessStoryBurger = () => {
     setActiveLayer(activeLayer === index ? null : index);
   };
 
-  // Анимация появления при загрузке
   useEffect(() => {
     const timer = setTimeout(() => {
-      // Компонент уже отрендерен с анимацией через CSS
+      setLoaded(true);
     }, 300);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="success-story-burger">
-      <div className="container">
+    <div className="min-h-screen bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] text-white overflow-x-hidden font-['Segoe_UI',sans-serif]">
+      <div className="container mx-auto px-5 py-8 max-w-7xl">
         {/* Визуализация бургера */}
-        <div className="burger-visual">
-          <div className="visual-title">Слои успеха</div>
-          <div className="burger-bun"></div>
-          <div className="burger-patty"></div>
-          <div className="burger-cheese"></div>
-          <div className="burger-bun-bottom"></div>
+        <div className="flex flex-col items-center my-10 md:my-16 max-w-xs mx-auto">
+          <div className="text-xl mb-6 text-[#b0c4de] text-center">Слои успеха</div>
+          <div className="w-64 h-6 bg-gradient-to-r from-[#d9a465] to-[#f7c873] rounded-t-[50px] mb-1 shadow-lg"></div>
+          <div className="w-72 h-10 bg-gradient-to-r from-[#8b4513] to-[#a0522d] rounded-lg mb-1 shadow-lg"></div>
+          <div className="w-80 h-4 bg-gradient-to-r from-[#ffd700] to-[#ffec8b] rounded mb-1 shadow-md"></div>
+          <div className="w-64 h-5 bg-gradient-to-r from-[#d9a465] to-[#f7c873] rounded-b-[50px] shadow-lg"></div>
         </div>
         
         {/* Бургер из историй */}
-        <div className="burger-container">
+        <div className="max-w-4xl mx-auto mb-16 relative">
           {burgerLayers.map((layer, index) => (
-            <BurgerLayer 
+            <div
               key={layer.id}
-              layer={layer}
-              isActive={activeLayer === index}
+              className={`
+                bg-white/8 rounded-2xl mb-1 p-6 md:p-8 relative cursor-pointer
+                transition-all duration-400 ease-in-out border border-white/10
+                hover:bg-white/12 hover:translate-x-3 md:hover:translate-x-4
+                ${layer.borderColor} border-l-6
+                bg-gradient-to-r ${layer.gradient}
+                ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}
+                ${activeLayer === index ? 'bg-white/15 translate-x-4 md:translate-x-5 shadow-xl' : ''}
+              `}
               onClick={() => handleLayerClick(index)}
-            />
+              style={{ transition: 'opacity 0.5s ease, transform 0.5s ease' }}
+            >
+              <div className="flex items-center mb-4">
+                <div className={`${layer.numberColor} w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-5 flex-shrink-0`}>
+                  {layer.number}
+                </div>
+                <h2 className="text-xl md:text-2xl font-semibold">{layer.title}</h2>
+              </div>
+              
+              <div className={`absolute right-6 md:right-8 top-6 md:top-8 text-2xl opacity-50 transition-all duration-300 ${layer.iconColor} ${activeLayer === index ? 'rotate-180 opacity-80' : ''}`}>
+                {activeLayer === index ? <FaChevronUp /> : <FaChevronDown />}
+              </div>
+              
+              <span className="hidden lg:block absolute top-1/2 -right-20 -translate-y-1/2 rotate-90 text-sm opacity-70 tracking-wider whitespace-nowrap">
+                {layer.label}
+              </span>
+              
+              <div className={`
+                pl-0 md:pl-16 overflow-hidden transition-all duration-500
+                ${activeLayer === index ? 'max-h-[800px] mt-4' : 'max-h-0'}
+              `}>
+                <p className="mb-6 text-base md:text-lg leading-relaxed text-[#e6f2ff]">
+                  {layer.description}
+                </p>
+                
+                <div className="bg-black/20 rounded-xl p-5 md:p-6 mt-5 border border-white/5">
+                  <h3 className="flex items-center mb-4 text-white text-lg md:text-xl">
+                    <FaTrophy className="mr-3" /> {layer.achievement.title}
+                  </h3>
+                  <p className="mb-5">{layer.achievement.description}</p>
+                  
+                  <ul className="list-none">
+                    {layer.achievement.points.map((point, idx) => (
+                      <li key={idx} className="py-3 pl-9 relative border-b border-white/5 last:border-b-0">
+                        <FaCheckCircle className="absolute left-0 top-4 text-[#4cd964]" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
         
-        <div className="conclusion">
-          <h2>Секрет успешного "бургера" достижений</h2>
-          <p>Как и в хорошем бургере, успех складывается из качественных ингредиентов: целеустремленности (булочка), навыков (котлета) и реализации (сыр). Каждый слой этой истории важен и дополняет другие, создавая целостную картину достижений.</p>
-          <p>Эти три проекта демонстрируют, как разные навыки — от переговоров и финансового планирования до технической экспертизы — могут сочетаться для достижения впечатляющих результатов в различных сферах.</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Компонент для отдельного слоя бургера
-const BurgerLayer = ({ layer, isActive, onClick }) => {
-  return (
-    <div 
-      className={`burger-layer ${layer.colorClass} ${isActive ? 'active' : ''}`}
-      onClick={onClick}
-    >
-      <div className="layer-header">
-        <div className="layer-number">{layer.number}</div>
-        <h2 className="layer-title">{layer.title}</h2>
-      </div>
-      <div className="burger-icon">
-        <i className={`fas fa-chevron-${isActive ? 'up' : 'down'}`}></i>
-      </div>
-      <span className="layer-label">{layer.label}</span>
-      
-      <div className="layer-content">
-        <p className="layer-description">{layer.description}</p>
-        
-        <div className="achievement-box">
-          <h3 className="achievement-title">
-            <i className="fas fa-trophy"></i> {layer.achievement.title}
-          </h3>
-          <p>{layer.achievement.description}</p>
-          
-          <ul className="key-points">
-            {layer.achievement.points.map((point, index) => (
-              <li key={index}>
-                <i className="fas fa-check-circle"></i> {point}
-              </li>
-            ))}
-          </ul>
+        <div className="bg-white/5 rounded-2xl p-6 md:p-8 mb-10 border border-white/8">
+          <h2 className="text-2xl md:text-3xl text-white mb-6 text-center">
+            Секрет успешного "бургера" достижений
+          </h2>
+          <p className="text-base md:text-lg max-w-3xl mx-auto mb-5 text-center leading-relaxed text-[#ccd9f0]">
+            Как и в хорошем бургере, успех складывается из качественных ингредиентов: целеустремленности (булочка), навыков (котлета) и реализации (сыр). Каждый слой этой истории важен и дополняет другие, создавая целостную картину достижений.
+          </p>
+          <p className="text-base md:text-lg max-w-3xl mx-auto text-center leading-relaxed text-[#ccd9f0]">
+            Эти три проекта демонстрируют, как разные навыки — от переговоров и финансового планирования до технической экспертизы — могут сочетаться для достижения впечатляющих результатов в различных сферах.
+          </p>
         </div>
       </div>
     </div>
